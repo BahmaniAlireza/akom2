@@ -26,23 +26,13 @@ spec:
 """
     }
   }
+
   stages {
-    stage('stage2') {
+    stage('Build image') {
       steps {
-        sh 'echo "aaaaa"'
-      }
-    }
-    stage('stage3') {
-      steps {
-        sh '''echo "3333"
-sleep 10
-'''
-      }
-    }
-    stage('stage4') {
-      steps {
-        sh '''echo "4444"
-sleep 10'''
+        container('docker') {
+          sh "docker ps "
+        }
       }
     }
   }
