@@ -35,14 +35,14 @@ spec:
     stage('stage3') {
       steps {
         sh '''echo "3333"
-sleep 30
+sleep 10
 '''
       }
     }
     stage('stage4') {
       steps {
         sh '''echo "4444"
-sleep 30'''
+sleep 10'''
       }
     }
   }
